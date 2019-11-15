@@ -2,4 +2,5 @@
 /service/__pycache__/*
 __pycache__/*
 .idea/*
-/models
+/models/*.h5
+/models/*.json
