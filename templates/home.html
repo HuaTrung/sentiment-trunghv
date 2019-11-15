@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <title>My Page</title>
+ </head>
+ <body>
+ <div style="width:50%;size: 16px">
+             <h2 class="form-signin-heading">Sentiment trunghv </h2>
+             <textarea style="width:50%;height: 100px;" id="text" type="text" name="text" class="form-control" placeholder="Text" required autofocus></textarea>
+             <button class="btn btn-lg btn-primary btn-block" type="button" id="button">Predict </button>
+     </div>
+ <div>
+     <table style="width:50%;border: 1px black solid;margin-top: 10px">
+  <tr>
+    <td>Positive</td>
+      <td style="color:red" id="positive"></td>
+  </tr>
+  <tr>
+    <td>Negative</td>
+    <td style="color:red" id="negative"></td>
+  </tr>
+         <tr>
+               <td>Result</td>
+                 <td style="color:red" id="result"></td>
+
+         </tr>
+</table>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+ <script>
+    $("#button").click(function() {
+
+        text=$("#text").val();
+        $.ajax({
+          type: "POST",
+          contentType: "application/json; charset=utf-8",
+          url: "/sentiment_detect",
+          data: JSON.stringify({"text": text}),
+          success: function (data) {
+            $("#positive").text(data.positive);
+            $("#negative").text(data.negative);
+            {#console.log(data.response);#}
+            $("#result").empty();
+            if (data.response=="positive"){
+                $("#result").append("<p>Positive  <i class=\"far fa-smile-beam\"></i></p>")
+            }
+            else{
+                if (data.response=="negative") {
+                    $("#result").append("<p>Negative  <i class=\"far fa-angry\"></i></p>")
+
+                }
+                else{
+                    $("#result").append("<p>Neutral  <i class=\"far fa-meh\"></i></p>")
+                }
+
+            }
+
+          },
+          dataType: "json"
+        });
+
+});
+ </script>
+ </body>
+</html>
