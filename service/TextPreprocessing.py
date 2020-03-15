@@ -4,8 +4,7 @@ import string
 
 def clean_str(target):
     """
-    Tokenization/string cleaning for all datasets except for SST.
-    Original taken from https://github.com/yoonkim/CNN_sentence/blob/master/process_data.py
+    Tokenization/string cleaning for all datasets.
     """
     target = re.sub(r"\'s", " \'s", target)
     target = re.sub(r"\'ve", " \'ve", target)

@@ -28,7 +28,7 @@ class SentimentService(object):
     def get_model1(self):
         # start_time = time.time()
         if self.model1 is None:
-            # print("loaded module")
+            print("loaded module")
             self.model1 = self.load_deep_model('1_2_3_200_filter_100')
         # elapsed_time = time.time() - start_time
         # print('Load model: ' + str(elapsed_time))
@@ -58,7 +58,7 @@ class SentimentService(object):
             # i=-1
             for i, word in enumerate(seq_word):
                 if i >= 100:
-                    break;
+                    break
                 if word in tokenzier_custom:
                     seq_vec[i] = tokenzier_custom[word]
                 else:
