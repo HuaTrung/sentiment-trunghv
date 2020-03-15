@@ -78,7 +78,7 @@ On the other hand, using CNN model with filter_size [1, 2, 3] of length only tak
 For other models, there are no noticable differences in terms of accuracy and process time.
 ## Conclusion
 
- <img src="images/conclusion.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="200" />
+ <img src="images/conclusion.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="100" />
 
 With the goal of building a model for social media realtime processing in mind, we take processing time into account most to decide which model to choose. However, to be more objective, we decided to include a CNN model with filter size = [3, 4, 5] with 50 in length, which have a high precision score of 0.953 and process time of 75.23 seconds, in the performance test to choose the model with the best response time.
 ## Deploy
