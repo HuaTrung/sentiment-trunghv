@@ -56,7 +56,9 @@ After merging fomr 2 dictionaries, we got a new dictionary with 440717 words.
 - For Zero padding with short comment, we added <b>UNKNOWN</b> relatively vector <b>ZERO</b>.
 - The length of vector is determined by the most covered training set. 
 <img src="images/distribution.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
+
 With length equals 50, We coverd 92.89% training set. However, we will test for both lenghth of 50 and 100.
+
 ## Training
  We refer 2 famouse paper:
  - Convolutional neural network architecture from Kim (2014)[1].
