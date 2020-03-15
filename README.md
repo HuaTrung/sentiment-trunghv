@@ -55,7 +55,7 @@ After merging fomr 2 dictionaries, we got a new dictionary with 440717 words.
 ### Tokenizer
 - For Zero padding with short comment, we added <b>UNKNOWN</b> relatively vector <b>ZERO</b>.
 - The length of vector is determined by the most covered training set. 
-<img src="images/distribution.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="400" />
+<img src="images/distribution.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
 With length equals 50, We coverd 92.89% training set. However, we will test for both lenghth of 50 and 100.
 ## Training
  We refer 2 famouse paper:
@@ -64,12 +64,12 @@ With length equals 50, We coverd 92.89% training set. However, we will test for 
 
  We trained 6 models with diffrent hypeparameter.
 
- <img src="images/models.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="400" />
+ <img src="images/models.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
 
 
 ## Result
 
- <img src="images/results.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="400" />
+ <img src="images/results.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
 
 
 It is evident that using CNN model with filter_size [4, 5, 6] for 100 comments yield the highest score but is also takes the most time. 
@@ -78,7 +78,7 @@ On the other hand, using CNN model with filter_size [1, 2, 3] of length only tak
 For other models, there are no noticable differences in terms of accuracy and process time.
 ## Conclusion
 
- <img src="images/conclusion.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="400" />
+ <img src="images/conclusion.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="200" />
 
 With the goal of building a model for social media realtime processing in mind, we take processing time into account most to decide which model to choose. However, to be more objective, we decided to include a CNN model with filter size = [3, 4, 5] with 50 in length, which have a high precision score of 0.953 and process time of 75.23 seconds, in the performance test to choose the model with the best response time.
 ## Deploy
@@ -94,7 +94,8 @@ Port : 5000
 python app.py
 ```
 ### Payload
- ![Image description](images/payload.png)
+ <img src="images/payload.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
+
 ## References
 [1] Yoon Kim (2014). “Convolutional neural networks for sentence classification”. published at Association for Computational Linguistics (ACL).
 
