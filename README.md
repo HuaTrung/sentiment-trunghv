@@ -28,6 +28,7 @@ Read [here](https://vlsp.org.vn/vlsp2016/eval/sa) for more information.
 
 ## Preprocessing
 ### Clearning
+
 16087 comments which is labeled pos and neg.
 
 |	|Positive|	Negative|
@@ -36,6 +37,12 @@ Read [here](https://vlsp.org.vn/vlsp2016/eval/sa) for more information.
 |Tổng cộng|	57%	|43%|
 
 This data is balanced between 2 labels, therefore It's qualification for learning model.
+
+80% of the data is used for training and the remaining 20% is used for validation with random_state of 200. Before feeding the model with data, we have to do the following pre-processing steps:
++ Remove punctuations
++ Remove stop words (ex: thì, là,...)
++ Convert to normal case
+
 ### Word Embedding
 We used 2 word2vec libraries:
 - word2vec from SonVX [link](https://github.com/sonvx/word2vecVN).
