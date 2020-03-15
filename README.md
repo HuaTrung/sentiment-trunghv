@@ -48,7 +48,7 @@ After merging fomr 2 dictionaries, we got a new dictionary with 440717 words.
 ### Tokenizer
 - For Zero padding with short comment, we added <b>UNKNOWN</b> relatively vector <b>ZERO</b>.
 - The length of vector is determined by the most covered training set. 
-![Image description](images/distribution.png)
+<img src="images/distribution.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="200" />
 With length equals 50, We coverd 92.89% training set. However, we will test for both lenghth of 50 and 100.
 ## Training
  We refer 2 famouse paper:
@@ -56,12 +56,14 @@ With length equals 50, We coverd 92.89% training set. However, we will test for 
  - Twitter Sentiment Analysis with CNNs and LSTMs Mathieu Cliche (2017)[2].
 
  We trained 6 models with diffrent hypeparameter.
- ![Image description](images/models.png)
+
+ <img src="images/models.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="200" />
 
 
 ## Result
 
- ![Image description](images/results.png)
+ <img src="images/results.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="200" />
+
 
 It is evident that using CNN model with filter_size [4, 5, 6] for 100 comments yield the highest score but is also takes the most time. 
 
