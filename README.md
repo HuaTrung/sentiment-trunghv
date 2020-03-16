@@ -83,6 +83,8 @@ For other models, there are no noticable differences in terms of accuracy and pr
  <img src="images/conclusion.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="100" />
 
 With the goal of building a model for social media realtime processing in mind, we take processing time into account most to decide which model to choose. However, to be more objective, we decided to include a CNN model with filter size = [3, 4, 5] with 50 in length, which have a high precision score of 0.953 and process time of 75.23 seconds, in the performance test to choose the model with the best response time.
+
+All of our training process will summarize in [here](./training.ipynb)
 ## Deploy
 ### Enviroment 
 - python 3.5+
@@ -91,10 +93,12 @@ With the goal of building a model for social media realtime processing in mind, 
 ### Server configure
 Ubuntu 14.04 4GB RAM CPU 2 Core
 ### Running
-Port : 5000
+Go to ./ and run command:
 ```python
 python app.py
 ```
+Port : 5000
+
 ### Payload
  <img src="images/payload.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
 
