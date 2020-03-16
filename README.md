@@ -73,6 +73,10 @@ With length equals 50, We coverd 92.89% training set. However, we will test for 
 
  <img src="images/results.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="300" />
 
+Note:
+> Bold number represents the highest or best score.
+
+> Italic number represents the second one.
 
 It is evident that using CNN model with filter_size [4, 5, 6] for 100 comments yield the highest score but is also takes the most time. 
 
